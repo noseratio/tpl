@@ -11,6 +11,7 @@ namespace Noseratio.ThreadAffinityTaskScheduler
     /// Provides a pool of single-threaded apartments.
     /// Each apartment provides asynchronous continuation after `await` on the same thread, 
     /// via SingleThreadSynchronizationContext object
+    /// http://stackoverflow.com/q/20993007/1768303
     /// 
     /// Partially based on StaTaskScheduler from http://blogs.msdn.com/b/pfxteam/archive/2010/04/07/9990421.aspx
     /// MIT License, (c) 2014 by Noseratio - http://stackoverflow.com/users/1768303/noseratio
