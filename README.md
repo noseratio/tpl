@@ -1,7 +1,10 @@
 TPL
 ===
 
-Task Parallel Library (TPL) Extensions
+Thread Affinity for Task Parallel Library (TPL)
 
 More info:
-http://stackoverflow.com/questions/20993007/how-to-use-non-thread-safe-async-await-apis-and-patterns-with-asp-net-web-api
+http://stackoverflow.com/a/21371891/1768303
+
+http://stackoverflow.com/q/20993007/1768303
+
