@@ -754,11 +754,11 @@ namespace Noseratio.ThreadAffinity
 		/// </summary>
 		static void Main(string[] args)
 		{
-			// test affinity with multiple apartments
-			//TestAsync().Wait();
-
-			// test mesage puming in singe apartments
-			PumpingTest.RunAsync().Wait();
+            // test mesage puming in singe apartments
+            PumpingTest.RunAsync().Wait();
+            
+            // test affinity with multiple apartments
+			TestAsync().Wait();
 
 			Console.WriteLine("Press any key to exit");
 			Console.ReadLine();
