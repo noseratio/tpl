@@ -128,6 +128,12 @@ namespace Noseratio.ThreadAffinity
 		}
 
 		/// <summary>A handy wrapper around Task.Factory.StartNew</summary>
+		public Task Run(Action action, CancellationToken token)
+		{
+			return Task.Factory.StartNew(action, token, TaskCreationOptions.None, this);
+		}
+
+		/// <summary>A handy wrapper around Task.Factory.StartNew</summary>
 		public Task Run(Func<Task> action, CancellationToken token)
 		{
 			return Task.Factory.StartNew(action, token, TaskCreationOptions.None, this).Unwrap();
@@ -303,6 +309,12 @@ namespace Noseratio.ThreadAffinity
 				_items.Dispose();
 				_items = null;
 			}
+		}
+
+		/// <summary>A handy wrapper around Task.Factory.StartNew</summary>
+		public Task Run(Action action, CancellationToken token)
+		{
+			return Task.Factory.StartNew(action, token, TaskCreationOptions.None, this.Scheduler);
 		}
 
 		/// <summary>A handy wrapper around Task.Factory.StartNew</summary>
